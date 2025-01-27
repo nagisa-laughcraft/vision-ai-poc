@@ -1,0 +1,41 @@
+# Node.js関連
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ビルド出力
+dist/
+build/
+
+# 環境変数ファイル
+.env
+.env.local
+.env.*.local
+
+# ログファイル
+logs
+*.log
+*.log.*
+
+# OSやエディタ関連
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# テスト出力
+coverage/
+
+# Babelのキャッシュ
+.babel_cache/
+
+# Webpackのキャッシュ
+.cache/
+
+# その他
+*.swp
+*.swo 
+
+.next/
+out/
