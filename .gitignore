@@ -39,3 +39,9 @@ coverage/
 
 .next/
 out/
+
+# Firebase service account key
+serviceAccountKey.json
+
+*.rules
+cors.json
