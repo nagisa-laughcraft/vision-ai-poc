@@ -67,7 +67,7 @@ export default function Home() {
 
       {/* Uploaded Images */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visionResults.map((result, index) => (
+        {visionResults && visionResults.map((result, index) => (
           <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
             <CardContent className="p-0">
               <div className="aspect-[4/3] relative">
@@ -90,12 +90,13 @@ export default function Home() {
                 <div>
                   <p>購入リンク:</p>
                   {Object.entries(result.purchaseLinks).map(([domain, url]) => (
-                    <a key={domain} href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-                      {domain}
-                    </a>
+                    <p key={domain}>
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+                        {domain}
+                      </a>
+                    </p>
                   ))}
                 </div>
-                <p>アップロード日: {result.timestamp.toDate().toLocaleString()}</p>
               </div>
             </CardContent>
           </Card>
